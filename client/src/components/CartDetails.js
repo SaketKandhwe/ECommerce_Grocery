@@ -9,6 +9,7 @@ import {
 } from "../redux/features/cartSlice";
 import toast from "react-hot-toast";
 import { loadStripe } from "@stripe/stripe-js";
+import { useNavigate } from 'react-router-dom';
 
 const CartDetails = () => {
   const { carts } = useSelector((state) => state.allCart);
@@ -99,6 +100,14 @@ const CartDetails = () => {
       console.log(result.error);
     }
   };
+
+   // token
+   const navigate=useNavigate();
+   useEffect(()=>{
+     if(!localStorage.getItem('isLogedIn')){
+       navigate('/login')
+     }
+   },[]);
 
   return (
     <>
