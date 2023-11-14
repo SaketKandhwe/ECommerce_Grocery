@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './map.css';
 
-const Map = () => {
+const OrderTracking = () => {
   // Initialize state for the current step
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -79,4 +79,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default OrderTracking;

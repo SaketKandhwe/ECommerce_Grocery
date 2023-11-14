@@ -11,7 +11,7 @@ import Signin from './components/signinsingup/Signin';
 import Signup from './components/signinsingup/Signup';
 import CircularProgress from '@mui/material/CircularProgress';
 import React, {useState, useEffect} from 'react';
-
+import OrderTracking from './components/map/Map';
 
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
       <Route  path='/cart' element={<CartDetails />}/>
       <Route  path='/sucess' element={<Sucess />}/>
       <Route  path='/cancel' element={<Cancel />}/>      
+      <Route path='/yourorder' element={<OrderTracking />}/>
      </Routes>
      <Toaster />
      </>
