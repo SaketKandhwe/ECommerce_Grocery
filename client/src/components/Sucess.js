@@ -1,10 +1,14 @@
 import React from 'react';
 // import Home from './components/Home';
+//import Map from "./map/Map"
+import { NavLink } from 'react-router-dom';
 
 const Sucess = () => {
   return (
-    <div>Sucess</div>,
-    <a href='./Home.js'></a>
+    <>
+    <div>Sucess</div>
+    <NavLink to='/yourorder'>Order</NavLink>
+    </>
   )
 }
 
