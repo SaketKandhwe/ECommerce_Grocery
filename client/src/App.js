@@ -36,7 +36,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route  path='/cart' element={<CartDetails />}/>
       <Route  path='/sucess' element={<Sucess />}/>
-      <Route  path='/cancel' element={<Cancel />}/>
+      <Route  path='/cancel' element={<Cancel />}/>      
      </Routes>
      <Toaster />
      </>

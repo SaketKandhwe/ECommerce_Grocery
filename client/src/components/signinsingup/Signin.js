@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import logoimage from "./logo.jpeg";
 import "./account.css";
+import Headers from "../Headers";
 import { NavLink, useNavigate } from "react-router-dom"; //Page linked but without reload the page
 import { Link } from "react-router-dom";
 import "./LoginValidation";
@@ -93,6 +94,9 @@ const handlePasswordChange = (prop) => (event) => {
     }
   };
   return (
+    <>
+    <Headers />
+
     <section>
       <div className="log_container">
         <div className="log_header">
@@ -199,6 +203,7 @@ const handlePasswordChange = (prop) => (event) => {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

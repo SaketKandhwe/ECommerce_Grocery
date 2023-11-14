@@ -33,7 +33,8 @@ const Home = () => {
         <Headers />
         
         <section className="iteam_section mt-4 container">
-          
+
+        <subheder>
         <div className="btn-container d-flex justify-content-around mt-2">
           <button variant="primary" onClick={()=>setCartData(CardsData)}>All</button>
           <button variant="primary" onClick={()=>filteritems("Aata")}>Aata</button>
@@ -43,6 +44,7 @@ const Home = () => {
           <button variant="primary" onClick={()=>filteritems("Chocalate")}>Chocalate</button>
           <button variant="primary" onClick={()=>filteritems("Beverage")}>Beverage</button>
         </div>
+        </subheder>
           <div className="row mt-2 d-flex justify-content-around align-items-center">
             {cartData.map((element, index) => {
               return (

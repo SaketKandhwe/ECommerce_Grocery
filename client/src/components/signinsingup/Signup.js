@@ -7,6 +7,7 @@ import logoimage from "./logo.jpeg";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Headers from "../Headers";
 // import Passwordinput from "./Passwordinput";
 //eye Icon
 import Visibility from '@mui/icons-material/Visibility';
@@ -99,6 +100,7 @@ const handlePasswordChange = (prop) => (event) => {
 
   return (
     <>
+    <Headers />
       <section>
         <div className="log_container">
           <div className="log_header">
