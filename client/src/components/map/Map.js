@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './map.css';
+import Headers from '../Headers';
 
 const OrderTracking = () => {
   // Initialize state for the current step
@@ -10,7 +11,6 @@ const OrderTracking = () => {
   const steps = [
     'Confirmed Order',
     'Processing Order',
-    'Quality Check',
     'Product Dispatched',
     'Product Delivered',
   ];
@@ -30,9 +30,18 @@ const OrderTracking = () => {
 
   return (
     <>
+    <Headers/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+
+
+
       {/* Your existing JSX code for the order tracking component */}
       <div className="main_container">
-        <h1>Grocery</h1>
         <div className="container padding-bottom-3x mb-1">
           <div className="card mb-3">
             <div className="p-4 text-center text-white text-lg bg-dark rounded-top">
@@ -41,13 +50,13 @@ const OrderTracking = () => {
             </div>
             <div className="d-flex flex-wrap flex-sm-nowrap justify-content-between py-3 px-2 bg-secondary">
               <div className="w-100 text-center py-1 px-2">
-                <span className="text-medium">Shipped Via:</span> UPS Ground
+                <span className="text-medium">Shipped Via:</span> Our Delivery Partner
               </div>
               <div className="w-100 text-center py-1 px-2">
-                <span className="text-medium">Status:</span> Checking Quality
+                <span className="text-medium">Status:</span> Order Processed
               </div>
               <div className="w-100 text-center py-1 px-2">
-                <span className="text-medium">Expected Date:</span> APR 27, 2021
+                <span className="text-medium">Expected Date:</span> November 20, 2023
               </div>
             </div>
             <div className="card-body">
@@ -67,10 +76,10 @@ const OrderTracking = () => {
           </div>
           <div className="d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-sm-between align-items-center">
             <div className="text-left text-sm-right">
-              <p><strong>Note:</strong> Once your order it will be  not cancel</p>
-              <a className="btn btn-outline-primary btn-rounded btn-sm" href="/cart">
+              <p><strong>Note:</strong> Once your order placed, it will not cancelled</p>
+              {/* <a className="btn btn-outline-primary btn-rounded btn-sm" href="/cart">
                 View Order Details
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

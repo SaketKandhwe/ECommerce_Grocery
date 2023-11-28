@@ -79,7 +79,7 @@ const handlePasswordChange = (prop) => (event) => {
         .post("http://localhost:7000/signup", values)
         .then(res => {
           if (res.data === "Success") {
-            navigate("/");
+            navigate("/cart");
           } else {
             alert("No record existed");
           }

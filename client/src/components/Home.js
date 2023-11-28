@@ -45,6 +45,9 @@ const Home = () => {
           <button variant="primary" onClick={()=>filteritems("Beverage")}>Beverage</button>
         </div>
         </subheder>
+        <br></br>
+        <br></br>
+
           <div className="row mt-2 d-flex justify-content-around align-items-center">
             {cartData.map((element, index) => {
               return (

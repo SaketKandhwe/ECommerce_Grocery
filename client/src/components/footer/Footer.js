@@ -14,9 +14,9 @@ const Footer = () => {
                 <div className='footer_details_one'>
                     <h3>About Us</h3>
                     <div className="links">
-                        <NavLink to="/about_us" className="onedata">About Us</NavLink><br />
-                        <NavLink to="../contactus" className="onedata">Contact US</NavLink><br />
-                        <NavLink to="tandc" className="onedata">Terms and Conditions</NavLink><br />
+                        <NavLink to="#" className="onedata">About Us</NavLink><br />
+                        <NavLink to="#" className="onedata">Contact US</NavLink><br />
+                        <NavLink to="#" className="onedata">Terms and Conditions</NavLink><br />
                     </div>
                 </div>
                 <div className='footer_details_one'>
@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <div className='footer_details_one'>
                     <h3>Address</h3>
-                    <p>Gadhave Colony, Shastri Nagar Road, Shastri Nagar, Kothrud, Pune, Maharashtra, 411038</p>
+                    <p>Tower Chowk, Ashapur, Benipur, Bihar, 847103</p>
                 </div>
             </div>
             <div className='lastdetails'>

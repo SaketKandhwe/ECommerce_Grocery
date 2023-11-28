@@ -23,7 +23,7 @@ function App() {
       setData(true)
     }, 2000)
   }, [])
-  const login = window.localStorage.getItem("isLogedIn");
+  // const login = window.localStorage.getItem("isLogedIn");
   return (
     <>
    {
