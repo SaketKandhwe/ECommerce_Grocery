@@ -6,6 +6,9 @@ import CardsData from "./CardData.js";
 import { addToCart } from "../redux/features/cartSlice";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
+import Footer from "./footer/Footer.js";
+import Headers from "./Headers.js";
+
 
 const Home = () => {
   const [cartData, setCartData] = useState(CardsData);
@@ -25,14 +28,13 @@ const Home = () => {
 };
 
   return (
-    <>
+    <>  
+
+        <Headers />
+        
         <section className="iteam_section mt-4 container">
-          <h2 className="px-4" style={{ fontWeight: 400 , textAlign: 'center' }}>
-            Grocery On The Way
-          </h2> <br /><br />
-          {/* <h6 className="text-center mb-2" style={{ fontWeight: 400, border: '2 solid black'  }}>
-          Search Your Food
-        </h6> */}
+
+        <subheder>
         <div className="btn-container d-flex justify-content-around mt-2">
           <button variant="primary" onClick={()=>setCartData(CardsData)}>All</button>
           <button variant="primary" onClick={()=>filteritems("Aata")}>Aata</button>
@@ -42,10 +44,15 @@ const Home = () => {
           <button variant="primary" onClick={()=>filteritems("Chocalate")}>Chocalate</button>
           <button variant="primary" onClick={()=>filteritems("Beverage")}>Beverage</button>
         </div>
+        </subheder>
+        <br></br>
+        <br></br>
+
           <div className="row mt-2 d-flex justify-content-around align-items-center">
             {cartData.map((element, index) => {
               return (
                 <>
+                
                   <Card
                     style={{ width: "22rem", border: "none" }}
                     className="hove mb-4"
@@ -59,11 +66,9 @@ const Home = () => {
                     <div className="card_body">
                       <div className="upper_data d-flex justify-content-between align-items-center">
                         <h4 className="mt-2">{element.dish}</h4>
-                        {/* <span>{element.rating}&nbsp;★</span> */}
                       </div>
 
                       <div className="lower_data d-flex justify-content-between ">
-                        {/* <h5>{element.address}</h5> */}
                         <span>₹ {element.price}</span>
                       </div>
                       <div className="extra"></div>
@@ -91,6 +96,8 @@ const Home = () => {
             })}
           </div>
         </section>
+        
+        <Footer />
       
     </>
   );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./cartstyle.css";
+import Headers from "./Headers";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -9,6 +10,7 @@ import {
 } from "../redux/features/cartSlice";
 import toast from "react-hot-toast";
 import { loadStripe } from "@stripe/stripe-js";
+import { useNavigate } from 'react-router-dom';
 
 const CartDetails = () => {
   const { carts } = useSelector((state) => state.allCart);
@@ -100,8 +102,17 @@ const CartDetails = () => {
     }
   };
 
+   // token
+   const navigate=useNavigate();
+   useEffect(()=>{
+     if(!localStorage.getItem('isLogedIn')){
+       navigate('/login')
+     }
+   },[]);
+
   return (
     <>
+    <Headers/>
       <div className="row justify-content-center m-0">
         <div className="col-md-8 mt-5 mb-5 cardsdetails">
           <div className="card">
